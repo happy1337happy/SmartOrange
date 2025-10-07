@@ -1,19 +1,28 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { fileURLToPath, URL } from 'node:url'  // <- Добавь это для алиаса
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/SmartOrange/',
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))  // <- Это фиксит @
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/assets/styles/variables.scss" as *;`  // Глобальный @use (фиксит SCSS частично)
+        additionalData: `@use "@/assets/styles/variables.scss" as *;`
       }
     }
+  },
+  server: {
+    port: 5173,
+    open: true 
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true 
   }
 })
