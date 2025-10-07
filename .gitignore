@@ -1,0 +1,34 @@
+# node
+/node_modules
+
+# build outputs
+/dist
+/build
+
+# env
+.env
+.env.*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# vite
+/.vite
+
+# coverage
+coverage
+
+# node
+node_modules/
+# (на всякий случай, абсолютный вариант)
+/node_modules/
