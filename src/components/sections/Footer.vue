@@ -162,10 +162,10 @@
               }
             }
             .phone {
-              font-size: clamp(14px, 1vw, 20px);
+              font-size: clamp(14px, 0.9vw, 20px);
               margin-bottom: 15px;
               position: relative;
-              padding-left: clamp(20px, 1.5vw, 26px);
+              padding-left: clamp(18px, 1.5vw, 26px);
               &::before {
                 content: "";
                 position: absolute;
